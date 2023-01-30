@@ -124,22 +124,16 @@ let bd = new Bd()
 
 function cadastrarDespesa() {
 
-	let ano = document.getElementById('ano')
-	let mes = document.getElementById('mes')
-	let dia = document.getElementById('dia')
-	let tipo = document.getElementById('tipo')
-	let descricao = document.getElementById('descricao')
-	let valor = document.getElementById('valor')
-
+	let nome = document.getElementById('nome')
+	let cnpj = document.getElementById('cnpj')
+	let telefone = document.getElementById('telefone')
+	
 	let despesa = new Despesa(
-		ano.value, 
-		mes.value, 
-		dia.value, 
-		tipo.value, 
-		descricao.value,
-		valor.value
+		nome.value, 
+		cnpj.value, 
+		telefone.value		
 	)
-
+console.log(nome.value, cnpj.value, telefone.value);
 
 	if(despesa.validarDados()) {
 		bd.gravar(despesa)
